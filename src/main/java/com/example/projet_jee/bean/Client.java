@@ -10,16 +10,19 @@ public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String ref;
+    private String cin;
+    private String nom;
 
-    public Client(Long id, String ref) {
-        this.id = id;
-        this.ref = ref;
+    // Constructor
+    public Client(String cin, String nom) {
+        this.cin = cin;
+        this.nom = nom;
     }
 
     public Client() {
     }
 
+    // Getter & Setter
     public Long getId() {
         return id;
     }
@@ -28,11 +31,19 @@ public class Client {
         this.id = id;
     }
 
-    public String getRef() {
-        return ref;
+    public String getCin() {
+        return cin;
     }
 
-    public void setRef(String ref) {
-        this.ref = ref;
+    public void setCin(String cin) {
+        this.cin = cin;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
     }
 }
